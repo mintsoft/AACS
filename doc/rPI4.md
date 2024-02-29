@@ -28,16 +28,15 @@ cd AACS
 git submodule init
 sub submodule update
 ```
-8. cmake the makefile together
+9. cmake the makefile together
 ```
 mkdir build;
 cd build;
 cmake ..
 ```
-9. Build the code
+10. Build the code
 ```
 make
 ```
-10. A while later... we should be able to run: `./AAserver/AAserver` and get the output. The device that the rPI4 is connected to should see a portable media player and a "cd drive" attach. 
-```
+11. A while later... we should be able to run: `./AAserver/AAserver` and get the output. The device that the rPI4 is connected to should see a portable media player and a "cd drive" attach. 
 
