@@ -1,6 +1,6 @@
 # Build and running on a standard raspbian Raspberry Pi 4 B
 
-* Unlike most tutorials using rPi4 in "otg" or gadget mode, this doesn't use the g_ether module and so we don't communicate over ssh with the pi using USB *
+Unlike most tutorials using rPi4 in "otg" or gadget mode, this doesn't use the g_ether module and so we don't communicate over ssh with the pi using USB
 
 
 1. Download and burn raspbian lite to an SD card
@@ -40,3 +40,4 @@ make
 ```
 18. A while later... we should be able to run: `./AAserver/AAserver` and get the output. The device that the rPI4 is connected to should see a portable media player and a "cd drive" attach. 
 
+Things to note, between testing runs of AAServer, it is safest to reboot the pi. The gadget mode changes are not neccessarily cleaned up and can result in errors such as: `usbg_create_gadget_vid_pid()  duplicate gadget name` appearing. From a fresh boot, this has worked every time for me.
