@@ -1,4 +1,4 @@
-# Instructions to build and run on an Raspberry Pi 4 B directly on raspbian
+# Build and running on a standard raspbian Raspberry Pi 4 B
 
 * Unlike most tutorials using rPi4 in "otg" or gadget mode, this doesn't use the g_ether module and so we don't communicate over ssh with the pi using USB *
 
