@@ -2,6 +2,7 @@
 
 * Unlike most tutorials using rPi4 in "otg" or gadget mode, this doesn't use the g_ether module and so we don't communicate over ssh with the pi using USB *
 
+
 1. Download and burn raspbian lite to an SD card
 2. Before booting the pi, mount the bootfs (on your PC) then: 
 2.1. edit `config.txt` and append `dtoverlay=dwc2` at the bottom of the file
@@ -15,7 +16,10 @@
 6.2. Go to system options and change the hostname to piaacs or whatever
 6.3. Go to system options and join the WiFi (optional, can use ethernet instead)
 6.4. Go to advanced and expand the filesystem
-6.5 reboot and then ssh into the pi
+6.5 reboot 
+6.6 at this point, definitely make sure you are powering the pi by connecting the USB-C port to your PC
+6.7 ssh into the pi over the WiFi/ethernet configured in 6.3
+
 7. install dependencies - `sudo apt install git build-essential tmux cmake libboost-dev libboost-filesystem-dev libboost-program-options-dev libssl-dev libdw-dev libdwarf-dev libprotobuf-dev libfmt-dev libgstreamer1.0-dev libusbgx-dev libconfig-dev libpcap-dev tcpdump libusb-1.0-0-dev libx11-dev libxtst-dev protobuf-compiler`
 8. clone the code 
 ```
@@ -34,4 +38,6 @@ cmake ..
 ```
 make
 ```
-10. A while later... we should be able to run: `./AAserver/AAserver` and get the output. The device that the rPI4 is connected to should see several USB devices attach.
+10. A while later... we should be able to run: `./AAserver/AAserver` and get the output. The device that the rPI4 is connected to should see a portable media player and a "cd drive" attach. 
+```
+
